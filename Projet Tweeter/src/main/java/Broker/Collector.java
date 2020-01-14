@@ -73,7 +73,8 @@ public class Collector {
         String text = new String(status.getText().replaceAll("\n", ""));
         String dateTweet = String.valueOf(status.getCreatedAt());
         String isRetweet = Boolean.toString(status.isRetweet());
+        String keyTweet = Long.toString(status.getId());
 
-        publisher.publish("{'User':'"+user+"', 'Text':'"+text+"', 'Is Retweet':'"+isRetweet+"', 'Date':'"+dateTweet+"'}");
+        publisher.publish(keyTweet,"{'User':'"+user+"', 'Text':'"+text+"', 'Is Retweet':'"+isRetweet+"', 'Date':'"+dateTweet+"'}");
     }
 }

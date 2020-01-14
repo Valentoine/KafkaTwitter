@@ -8,6 +8,9 @@ import org.apache.kafka.common.serialization.StringSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -35,9 +38,9 @@ public class KafkaPublisher {
         return new KafkaProducer<>(properties);
     }
 
-    void publish(String content) {
+    void publish(String key, String content) {
         logger.info(String.format("Publishing %s", content));
-        ProducerRecord<String, String> record = new ProducerRecord<>(topicName, content);
+        ProducerRecord<String, String> record = new ProducerRecord<>(topicName,key, content);
         producer.send(record, (recordMetadata, e) -> {
             if (e != null) {
                 logger.error(e.getMessage(), e);
