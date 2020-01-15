@@ -20,7 +20,7 @@ public class Starter {
     private static KafkaHandlerConfig buildConfig() {
         KafkaHandlerConfig config = new KafkaHandlerConfig();
         config.setBootstrapServers(Collections.singletonList("localhost:9092"));
-        config.setTopicName("Afrique_twitter");
+        config.setTopicName("Macron");
         return config;
     }
 }

@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d560c47c-949b-4037-853b-f75ee934c7db" name="Default Changelist" comment="1 topic ok">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Consumer/AppConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/KStream/AppStream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Broker/Collector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Broker/Collector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Broker/KafkaPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Broker/KafkaPublisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Broker/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Broker/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Broker/Collector$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Broker/Collector$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Consumer/AppConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Consumer/AppConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Broker/Collector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Broker/Collector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Broker/KafkaPublisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Broker/KafkaPublisher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Broker/Starter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Broker/Starter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Consumer/AppConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Consumer/AppConsumer.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +72,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="KStream.AppStream" />
+      <module name="Projet Tweeter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="KStream.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Collector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Broker.Collector" />
       <module name="Projet Tweeter" />
@@ -95,6 +108,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.AppConsumer" />
+        <item itemvalue="Application.AppStream" />
         <item itemvalue="Application.Starter" />
         <item itemvalue="Application.Collector" />
       </list>

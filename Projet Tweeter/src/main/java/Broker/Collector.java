@@ -55,7 +55,7 @@ public class Collector {
             //Filter of the api
 
             FilterQuery query = new FilterQuery();
-            String trackParam = "Afrique";
+            String trackParam = "Macron";
             query.track(trackParam.split(","));
 
             TwitterStream twitterStream = new TwitterStreamFactory(cb.build()).getInstance();
@@ -70,11 +70,11 @@ public class Collector {
 
     void formatAndPublish(Status status){
         String user = status.getUser().getName().replaceAll("[^a-zA-Z0-9]", "");
-        String text = new String(status.getText().replaceAll("\n", ""));
+        String text = new String(status.getText().replaceAll("\n", "").replaceAll("\"", ""));
         String dateTweet = String.valueOf(status.getCreatedAt());
         String isRetweet = Boolean.toString(status.isRetweet());
         String keyTweet = Long.toString(status.getId());
 
-        publisher.publish(keyTweet,"{'User':'"+user+"', 'Text':'"+text+"', 'Is Retweet':'"+isRetweet+"', 'Date':'"+dateTweet+"'}");
+        publisher.publish(keyTweet,"{\"User\":\""+user+"\", \"Text\":\""+text+"\", \"Is Retweet\":\""+isRetweet+"\", \"Date\":\""+dateTweet+"\"}");
     }
 }

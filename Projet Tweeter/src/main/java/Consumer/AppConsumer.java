@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class AppConsumer {
     public static void main(String[] args) {
 
-        final String topic = "Afrique_twitter";
+        final String topic = "Macron_Actu";
 
         final Properties properties = new Properties();
         properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
