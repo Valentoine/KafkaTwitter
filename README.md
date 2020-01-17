@@ -18,10 +18,9 @@ Deux procédures sont à lancer (dans l'ordre) :
 
 ## Quelles données et topics ?
 
-Nous utilisons l'API Twitter qui nous permet de récupérer un stream en temps réel de tweets. Nous avons donc créer deux topics, 
-le premier topic principal est sur Macron, il récupère tout les tweets où Macron est mentionné dans le texte (User, Text, IsRetweet, Date).
-Et ensuite le deuxième topic (produit par le KStream) est une sous-catégorie du premier, ou l'on réalise une condition : si ca parle de gilets
-jaunes, de la retraite ou autre, on le mentionne et l'on sélectionne uniquement le texte du tweet.
+Nous utilisons l'API Twitter qui nous permet de récupérer un stream en temps réel de tweets. Nous avons donc créé deux topics, 
+le premier topic qui est le topic principal est sur Macron, il récupère tous les tweets où Macron est mentionné dans le texte (User, Text, IsRetweet, Date).
+Ensuite, le deuxième topic (produit par le KStream) est une sous-catégorie du premier, ou l'on réalise une condition : si ca parle de gilets jaunes, de la retraite ou autre, on le mentionne et l'on sélectionne uniquement le texte du tweet.
 
 ## Explication du code 
 
@@ -37,7 +36,7 @@ On a repris le code, on a rien changé
 
 #### KStream
 
-On a repris le code mais on a eu beaucoup d'erreurs et de problème.
+On a repris le code mais on a eu beaucoup d'erreurs et de problèmes.
 Ca prend un stream en input (celui du producer), on parse en json et on récupère le texte
 On fait des tests (if, else , etc...)
 On créer un kafkaStream en output (on garde la même clé qu'avant, mais on change la value qu'avec le texte + Gilets Jaunes : .... ou 
